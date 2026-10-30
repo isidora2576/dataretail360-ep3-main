@@ -1,0 +1,93 @@
+2026-10-29 21:37:17 | INFO    | INICIO     | Ejecución 20261029_213651_2eb91f iniciada · log en pipeline_20261029_213651_2eb91f.log
+2026-10-29 21:37:23 | INFO    | CONEXION   | Conectado a SQL Server DESKTOP-DQ0SJAT\SQLEXPRESS · base DataRetail360
+2026-10-29 21:37:38 | ERROR   | CONEXION   | Error controlado (prueba): OperationalError: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [
+2026-10-29 21:37:53 | INFO    | EXTRACCION | Integridad OK: 98 archivos verificados con SHA-256
+2026-10-29 21:37:55 | INFO    | EXTRACCION | Ventas: 90 archivos leídos, 0 omitidos, 504,749 filas
+2026-10-29 21:37:55 | INFO    | EXTRACCION | Maestro productos: 33 filas (v1 + v2)
+2026-10-29 21:37:55 | INFO    | EXTRACCION | Maestro sucursales: 16 filas (v1 + v2)
+2026-10-29 21:37:55 | INFO    | EXTRACCION | Maestro clientes: 61,800 filas (v1 + v2)
+2026-10-29 21:37:55 | INFO    | EXTRACCION | Maestro campañas: 8 filas (v1 + v2)
+2026-10-29 21:37:58 | INFO    | BD         | Esquemas verificados: bronze, silver, gold, audit
+2026-10-29 21:38:16 | INFO    | BRONZE     | bronze.ventas_raw: 504,749 filas (17.0s)
+2026-10-29 21:38:16 | INFO    | BRONZE     | bronze.productos_raw: 33 filas (0.1s)
+2026-10-29 21:38:16 | INFO    | BRONZE     | bronze.sucursales_raw: 16 filas (0.3s)
+2026-10-29 21:38:18 | INFO    | BRONZE     | bronze.clientes_raw: 61,800 filas (1.8s)
+2026-10-29 21:38:18 | INFO    | BRONZE     | bronze.campanas_raw: 8 filas (0.1s)
+2026-10-29 21:38:18 | INFO    | BRONZE     | Capa bronze escrita en 19.3s
+2026-10-29 21:40:39 | INFO    | SILVER     | Regla linea_duplicada          [Unicidad    ]   4,998 filas → Se conserva la primera aparición
+2026-10-29 21:40:39 | INFO    | SILVER     | Regla sku_formato              [Consistencia]  24,932 filas → strip() + upper()
+2026-10-29 21:40:39 | INFO    | SILVER     | Regla canal_otra_grafia        [Consistencia]  19,990 filas → Mapeo al nombre oficial
+2026-10-29 21:40:40 | INFO    | SILVER     | Regla fecha_con_slash          [Validez     ]  14,972 filas → Reemplazo de '/' por '-'
+2026-10-29 21:40:40 | INFO    | SILVER     | Regla rut_sin_puntos           [Consistencia]   9,995 filas → Se normaliza antes del hash
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla fecha_imposible          [Validez     ]     499 filas → Cuarentena
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla fecha_fuera_de_periodo   [Validez     ]       0 filas → Cuarentena
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla monto_no_numerico        [Validez     ]     499 filas → Cuarentena
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla cantidad_invalida        [Validez     ]       0 filas → Cuarentena
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla precio_invalido          [Validez     ]       0 filas → Cuarentena
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla descuento_invalido       [Validez     ]       0 filas → Cuarentena
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla canal_invalido           [Validez     ]       0 filas → Cuarentena
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla estado_invalido          [Validez     ]       0 filas → Cuarentena
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla monto_negativo           [Validez     ]   1,995 filas → Valor absoluto
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla monto_distinto_calculo   [Exactitud   ]       0 filas → Se usa precio × cantidad
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla sucursal_vacia_o_inexistente [Completitud ]   3,992 filas → Clave −1 en Gold
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla sku_inexistente          [Consistencia]     999 filas → Clave −1 en Gold
+2026-10-29 21:40:41 | INFO    | SILVER     | Regla campana_inexistente      [Consistencia]     498 filas → Se asigna 'Sin campaña'
+2026-10-29 21:41:51 | INFO    | SILVER     | Regla cliente_duplicado        [Unicidad    ]     300 filas → Se conserva el primero
+2026-10-29 21:41:51 | INFO    | SILVER     | Datos personales descartados de clientes: rut_cliente, nombre, email, telefono
+2026-10-29 21:42:05 | INFO    | SILVER     | silver.ventas: 498,753 filas (14.4s)
+2026-10-29 21:42:06 | INFO    | SILVER     | silver.cuarentena_ventas: 998 filas (0.0s)
+2026-10-29 21:42:06 | INFO    | SILVER     | silver.reglas_calidad: 19 filas (0.0s)
+2026-10-29 21:42:06 | INFO    | SILVER     | silver.productos: 33 filas (0.0s)
+2026-10-29 21:42:06 | INFO    | SILVER     | silver.sucursales: 16 filas (0.0s)
+2026-10-29 21:42:07 | INFO    | SILVER     | silver.clientes: 61,500 filas (1.6s)
+2026-10-29 21:42:07 | INFO    | SILVER     | silver.campanas: 8 filas (0.0s)
+2026-10-29 21:42:07 | INFO    | SILVER     | Capa silver escrita en 16.0s
+2026-10-29 21:42:13 | INFO    | GOLD       | dim_fecha: 91 filas · dim_geografia: 16 filas
+2026-10-29 21:42:18 | INFO    | GOLD       | dim_producto SCD2: 4 SKU con nueva versión, 1 alta(s) · cambios por atributo {'precio_lista': 3, 'categoria': 1, 'producto': 0, 'subcategoria': 0, 'marca': 1, 'costo_unitario': 0}
+2026-10-29 21:42:18 | INFO    | GOLD       | dim_cliente SCD2: 2,314 clientes con nueva versión, 1,500 altas · cambios por atributo {'segmento': 1800, 'comuna': 543, 'region': 364, 'fecha_registro': 0}
+2026-10-29 21:42:18 | INFO    | GOLD       | dim_producto: 22 filas · dim_cliente: 33,815 filas (incluye fila −1)
+2026-10-29 21:42:34 | INFO    | GOLD       | dim_sucursal SCD3: 2 sucursales con cambio de formato: Maipú, Temuco
+2026-10-29 21:42:34 | INFO    | GOLD       | dim_sucursal: 9 · dim_canal: 4 · dim_campana: 5 filas
+2026-10-29 21:42:42 | INFO    | GOLD       | Precio de venta vs precio_lista vigente (SCD2): 0 diferencias
+2026-10-29 21:42:42 | INFO    | GOLD       | fact_ventas.producto_key: 999 filas con clave −1
+2026-10-29 21:42:42 | INFO    | GOLD       | fact_ventas.cliente_key: 41,213 filas con clave −1
+2026-10-29 21:42:42 | INFO    | GOLD       | fact_ventas.sucursal_key: 3,992 filas con clave −1
+2026-10-29 21:42:42 | INFO    | GOLD       | fact_ventas.canal_key: 0 filas con clave −1
+2026-10-29 21:42:42 | INFO    | GOLD       | fact_ventas.campana_key: 296,789 filas con clave −1
+2026-10-29 21:42:42 | INFO    | GOLD       | fact_ventas: 498,753 filas (Silver: 498,753)
+2026-10-29 21:42:48 | INFO    | GOLD       | fact_campana_diaria: 4,240 filas · fact_resultado_mensual: 468 filas
+2026-10-29 21:42:52 | INFO    | GOLD       | gold.dim_fecha: 91 filas (0.0s)
+2026-10-29 21:42:52 | INFO    | GOLD       | gold.dim_geografia: 16 filas (0.0s)
+2026-10-29 21:42:52 | INFO    | GOLD       | gold.dim_producto: 22 filas (0.0s)
+2026-10-29 21:42:53 | INFO    | GOLD       | gold.dim_cliente: 33,815 filas (0.6s)
+2026-10-29 21:42:53 | INFO    | GOLD       | gold.dim_sucursal: 9 filas (0.0s)
+2026-10-29 21:42:53 | INFO    | GOLD       | gold.dim_canal: 4 filas (0.0s)
+2026-10-29 21:42:53 | INFO    | GOLD       | gold.dim_campana: 5 filas (0.0s)
+2026-10-29 21:43:06 | INFO    | GOLD       | gold.fact_ventas: 498,753 filas (13.6s)
+2026-10-29 21:43:07 | INFO    | GOLD       | gold.fact_campana_diaria: 4,240 filas (0.1s)
+2026-10-29 21:43:07 | INFO    | GOLD       | gold.fact_resultado_mensual: 468 filas (0.0s)
+2026-10-29 21:43:07 | INFO    | GOLD       | Capa gold escrita en 14.4s
+2026-10-29 21:43:10 | INFO    | GOLD       | Claves creadas: 10 PK y 15 FK
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Filas Bronze = filas de la fuente: 504,749
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Filas Gold = filas Silver: 498,753
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Bronze = Silver + cuarentena + duplicados: 504,749
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas dim_cliente.geografia_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas dim_sucursal.geografia_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_ventas.fecha_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_ventas.producto_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_ventas.cliente_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_ventas.sucursal_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_ventas.canal_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_ventas.campana_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_campana_diaria.fecha_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_campana_diaria.campana_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_campana_diaria.canal_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_campana_diaria.sucursal_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_resultado_mensual.fecha_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_resultado_mensual.producto_key: 0
+2026-10-29 21:43:20 | INFO    | VALIDACION | OK    Claves huérfanas fact_resultado_mensual.sucursal_key: 0
+2026-10-29 21:43:21 | INFO    | VALIDACION | OK    Suma monto_bruto Gold = Silver: 151,379,233,000
+2026-10-29 21:43:21 | INFO    | VALIDACION | OK    Monto neto Marketing = fact_ventas: 137,748,478,040
+2026-10-29 21:43:21 | INFO    | VALIDACION | OK    Monto neto Finanzas = fact_ventas: 137,748,478,040
+2026-10-29 21:43:21 | INFO    | VALIDACION | OK    Grano único nro_boleta + nro_linea: 0
+2026-10-29 21:43:26 | INFO    | FIN        | Pipeline EXITOSA · 369s · log: pipeline_20261029_213651_2eb91f.log

@@ -1,0 +1,5 @@
+cod_campana,campana,tipo_campana,pct_descuento,fecha_inicio,fecha_fin,categorias_aplica,canal_aplica
+CMP-01,Liquidación de Verano,Liquidación,0.15,2025-01-02,2025-01-26,Todas,Todos
+CMP-02,Vuelta a Clases,Temporada,0.1,2025-02-15,2025-03-15,Tecnología|Accesorios,Todos
+CMP-03,Semana App,Canal digital,0.08,2025-02-03,2025-02-09,Todas,App
+CMP-04,Gaming Fest,Categoría,0.2,2025-03-20,2025-03-31,Gaming,Todos

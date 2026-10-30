@@ -1,0 +1,9 @@
+cod_sucursal,sucursal,formato,comuna,region,latitud,longitud,fecha_apertura
+S01,Providencia,Tienda grande,Providencia,Metropolitana,-33.4255,-70.6114,2015-03-10
+S02,Las Condes,Tienda grande,Las Condes,Metropolitana,-33.417,-70.55,2016-08-22
+S03,Maipú,Tienda mediana,Maipú,Metropolitana,-33.511,-70.758,2018-05-14
+S04,Ñuñoa,Tienda mediana,Ñuñoa,Metropolitana,-33.4569,-70.5973,2019-11-04
+S05,Concepción,Tienda grande,Concepción,Biobío,-36.827,-73.0503,2017-04-18
+S06,Antofagasta,Tienda mediana,Antofagasta,Antofagasta,-23.6509,-70.3975,2020-02-03
+S07,Viña del Mar,Tienda mediana,Viña del Mar,Valparaíso,-33.0245,-71.5518,2018-09-27
+S08,Temuco,Express,Temuco,La Araucanía,-38.7359,-72.5904,2021-06-15

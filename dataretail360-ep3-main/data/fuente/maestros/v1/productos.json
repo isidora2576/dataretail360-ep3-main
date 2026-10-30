@@ -1,0 +1,146 @@
+[
+ {
+  "sku": "NB-001",
+  "producto": "Notebook 14",
+  "subcategoria": "Computación",
+  "categoria": "Tecnología",
+  "marca": "Andes Tech",
+  "precio_lista": 799000,
+  "costo_unitario": 600000
+ },
+ {
+  "sku": "AU-002",
+  "producto": "Audífonos",
+  "subcategoria": "Audio",
+  "categoria": "Accesorios",
+  "marca": "Sonora",
+  "precio_lista": 30000,
+  "costo_unitario": 16000
+ },
+ {
+  "sku": "TV-003",
+  "producto": "Smart TV 55",
+  "subcategoria": "Televisión",
+  "categoria": "Tecnología",
+  "marca": "Pacífico",
+  "precio_lista": 459000,
+  "costo_unitario": 350000
+ },
+ {
+  "sku": "CE-004",
+  "producto": "Celular",
+  "subcategoria": "Telefonía",
+  "categoria": "Tecnología",
+  "marca": "Nova",
+  "precio_lista": 349000,
+  "costo_unitario": 255000
+ },
+ {
+  "sku": "TB-005",
+  "producto": "Tablet 10",
+  "subcategoria": "Computación",
+  "categoria": "Tecnología",
+  "marca": "Nova",
+  "precio_lista": 229000,
+  "costo_unitario": 165000
+ },
+ {
+  "sku": "MO-006",
+  "producto": "Monitor 27",
+  "subcategoria": "Computación",
+  "categoria": "Tecnología",
+  "marca": "Andes Tech",
+  "precio_lista": 189000,
+  "costo_unitario": 132000
+ },
+ {
+  "sku": "TE-007",
+  "producto": "Teclado",
+  "subcategoria": "Periféricos",
+  "categoria": "Accesorios",
+  "marca": "Kumbre",
+  "precio_lista": 25000,
+  "costo_unitario": 12500
+ },
+ {
+  "sku": "MS-008",
+  "producto": "Mouse",
+  "subcategoria": "Periféricos",
+  "categoria": "Accesorios",
+  "marca": "KUMBRE ",
+  "precio_lista": 15000,
+  "costo_unitario": 7000
+ },
+ {
+  "sku": "IM-009",
+  "producto": "Impresora",
+  "subcategoria": "Impresión",
+  "categoria": "Tecnología",
+  "marca": "Pacífico",
+  "precio_lista": 129000,
+  "costo_unitario": 92000
+ },
+ {
+  "sku": "PA-010",
+  "producto": "Parlante",
+  "subcategoria": "Audio",
+  "categoria": "Accesorios",
+  "marca": "Sonora",
+  "precio_lista": 59000,
+  "costo_unitario": 33000
+ },
+ {
+  "sku": "SW-011",
+  "producto": "Smartwatch",
+  "subcategoria": "Wearables",
+  "categoria": "Tecnología",
+  "marca": "Nova",
+  "precio_lista": 149000,
+  "costo_unitario": 98000
+ },
+ {
+  "sku": "CA-012",
+  "producto": "Cámara",
+  "subcategoria": "Fotografía",
+  "categoria": "Tecnología",
+  "marca": "Pacífico",
+  "precio_lista": 399000,
+  "costo_unitario": 290000
+ },
+ {
+  "sku": "RO-013",
+  "producto": "Router WiFi",
+  "subcategoria": "Redes",
+  "categoria": "Accesorios",
+  "marca": "Kumbre",
+  "precio_lista": 45000,
+  "costo_unitario": 26000
+ },
+ {
+  "sku": "DI-014",
+  "producto": "Disco SSD 1TB",
+  "subcategoria": "Almacenamiento",
+  "categoria": "Accesorios",
+  "marca": "Andes Tech",
+  "precio_lista": 69000,
+  "costo_unitario": 44000
+ },
+ {
+  "sku": "CO-015",
+  "producto": "Consola",
+  "subcategoria": "Consolas",
+  "categoria": "Gaming",
+  "marca": "Volcán",
+  "precio_lista": 499000,
+  "costo_unitario": 395000
+ },
+ {
+  "sku": "MI-016",
+  "producto": "Microondas",
+  "subcategoria": "Cocina",
+  "categoria": "Electrohogar",
+  "marca": "Pacífico",
+  "precio_lista": 89000,
+  "costo_unitario": 61000
+ }
+]
