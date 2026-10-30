@@ -10,7 +10,7 @@ GO
 USE DataRetail360;
 GO
 
--- Bronze: copia fiel de la fuente · Silver: datos limpios y validados
+-- Bronze: copia fiel de la fuente · Silver: datos limpios y validados esto
 -- Gold: modelo dimensional · Audit: trazabilidad de ejecuciones
 IF SCHEMA_ID('bronze') IS NULL EXEC('CREATE SCHEMA bronze');
 IF SCHEMA_ID('silver') IS NULL EXEC('CREATE SCHEMA silver');

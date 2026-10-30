@@ -3,7 +3,7 @@
    02 · Consultas de evidencia para las capturas del informe (SSMS)
    Ejecutar DESPUÉS del notebook 02. Cada bloque indica su captura.
    ===================================================================== 
-   tratando de conectar*/
+   tratando de conectar al sql server*/
 USE DataRetail360;
 GO
 
