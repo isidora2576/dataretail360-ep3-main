@@ -2,7 +2,8 @@
    DataRetail 360 · EP3 IDY1102
    02 · Consultas de evidencia para las capturas del informe (SSMS)
    Ejecutar DESPUÉS del notebook 02. Cada bloque indica su captura.
-   ===================================================================== */
+   ===================================================================== 
+   tratando de conectar*/
 USE DataRetail360;
 GO
 
